@@ -27,3 +27,17 @@ function generateComputerChoice() {
   }
   computerChoiceDisplay.innerHTML = computerChoice;
 }
+function getResult() {
+  if (computerChoice === userChoice) {
+    result = "its a draw";
+  }
+  if (computerChoice === "rock" && userChoice === "paper") {
+    result = "you win!";
+  }
+  if (computerChoice === "rock" && userChoice === "scissors") {
+    result = "you lost!";
+  }
+  if (computerChoice === "rock" && userChoice === "scissors") {
+    result = "you lost!";
+  }
+}
