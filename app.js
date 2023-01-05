@@ -10,6 +10,7 @@ possibleChoices.forEach((possibleChoices) =>
     userChoice = e.target.id;
     userChoiceDisplay.innerHTML = userChoice;
     generateComputerChoice();
+    getResult();
   })
 );
 
@@ -37,7 +38,17 @@ function getResult() {
   if (computerChoice === "rock" && userChoice === "scissors") {
     result = "you lost!";
   }
-  if (computerChoice === "rock" && userChoice === "scissors") {
+  if (computerChoice === "paper" && userChoice === "scissors") {
+    result = "you win!";
+  }
+  if (computerChoice === "paper" && userChoice === "rock") {
     result = "you lost!";
   }
+  if (computerChoice === "scissors" && userChoice === "rock") {
+    result = "you win!";
+  }
+  if (computerChoice === "scissors" && userChoice === "paper") {
+    result = "you lost!";
+  }
+  resultDisplay.innerHTML = result;
 }
